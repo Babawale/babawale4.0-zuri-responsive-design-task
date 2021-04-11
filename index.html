@@ -10,12 +10,13 @@
 <body>
     <div class="nav-bar">
         <div class="logo">Snapshot</div>
-        <ul class="nav-links">
+        <ul class="nav-links" id="menuList">
             <li><a href="#">Home</a></li>
             <li><a href="#">About</a></li>
             <li><a href="#">Gallery</a></li>
             <li><a href="#">Contact</a></li>
         </ul>
+        <img src="menu.png" class="menu-icon" onclick="togglemenu()">
     </div>
 
     <!-- Hero section -->
@@ -103,5 +104,21 @@
         </div>
         <h6>Copyright &copy; 2021 Zuri Training.</h6>
     </div>
+    <script>
+        var menuList = document.getElementById("menuList");
+        menuList.style.maxHeight = "0px";
+        function togglemenu(){
+            if(menuList.style.maxHeight == "0px")
+            {
+                menuList.style.maxHeight = "150px";
+            }
+            else
+            {
+                menuList.style.maxHeight = "0px";
+            }
+
+        }
+
+    </script>
 </body>
 </html>
